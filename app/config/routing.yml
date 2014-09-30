@@ -2,6 +2,9 @@ simple_profile:
     resource: "@SimpleProfileBundle/Resources/config/routing.yml"
     prefix:   /
 
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
 login_home:
     pattern:   /
     defaults:  { _controller: SimpleProfileBundle:Security:login }
