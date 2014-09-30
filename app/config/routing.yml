@@ -1,0 +1,24 @@
+simple_profile:
+    resource: "@SimpleProfileBundle/Resources/config/routing.yml"
+    prefix:   /
+
+login_home:
+    pattern:   /
+    defaults:  { _controller: SimpleProfileBundle:Security:login }
+    requirements:
+        _method:  GET
+
+login:
+    pattern:   /login
+    defaults:  { _controller: SimpleProfileBundle:Security:login }
+    requirements:
+        _method:  GET
+
+login_check:
+    pattern:   /login_check
+    requirements:
+        _method:  GET
+
+test_security:
+    pattern: /secure_area
+    defaults: {_controller: SimpleProfileBundle:Security:dumpString }
