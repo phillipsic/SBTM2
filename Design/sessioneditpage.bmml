@@ -29,6 +29,8 @@
     </control>
     <control controlID="5" controlTypeID="com.balsamiq.mockups::Link" x="431" y="495" w="-1" h="-1" measuredW="54" measuredH="19" zOrder="6" locked="false" isInGroup="-1">
       <controlProperties>
+        <href>sessionpage%26bm%3Bsessionpage.bmml%26bm%3Bsessionpage.bmml%26bm%3Bsessionpage.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22310%2C483%2C364%2C502%22%20href%3D%22sessionpage.bmml%22%20alt%3D%22sessionpage%22%20id%3D%225%22/%3E</map>
         <text>Sessions</text>
       </controlProperties>
     </control>
@@ -41,11 +43,15 @@
     </control>
     <control controlID="7" controlTypeID="com.balsamiq.mockups::Link" x="431" y="551" w="-1" h="-1" measuredW="94" measuredH="19" zOrder="8" locked="false" isInGroup="-1">
       <controlProperties>
+        <href>reviewpage%26bm%3Breviewpage.bmml%26bm%3Breviewpage.bmml%26bm%3Breviewpage.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22310%2C539%2C404%2C558%22%20href%3D%22reviewpage.bmml%22%20alt%3D%22reviewpage%22%20id%3D%227%22/%3E</map>
         <text>Review%20Session</text>
       </controlProperties>
     </control>
     <control controlID="8" controlTypeID="com.balsamiq.mockups::Link" x="431" y="578" w="-1" h="-1" measuredW="59" measuredH="19" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
+        <href>datefiles%26bm%3Bdatefiles.bmml%26bm%3Bdatefiles.bmml%26bm%3Bdatefiles.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22310%2C566%2C369%2C585%22%20href%3D%22datefiles.bmml%22%20alt%3D%22datefiles%22%20id%3D%228%22/%3E</map>
         <text>Data%20Files</text>
       </controlProperties>
     </control>
@@ -95,11 +101,11 @@
         <text>Actions</text>
       </controlProperties>
     </control>
-    <control controlID="23" controlTypeID="com.balsamiq.mockups::Label" x="549" y="96" w="-1" h="-1" measuredW="162" measuredH="26" zOrder="17" locked="false" isInGroup="-1">
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::Label" x="517" y="96" w="-1" h="-1" measuredW="226" measuredH="26" zOrder="17" locked="false" isInGroup="-1">
       <controlProperties>
         <color>13369344</color>
         <size>18</size>
-        <text>Message%20of%20the%20day</text>
+        <text>Project%20Message%20of%20the%20day</text>
         <underline>true</underline>
       </controlProperties>
     </control>
@@ -136,6 +142,8 @@
     </control>
     <control controlID="33" controlTypeID="com.balsamiq.mockups::Link" x="691" y="587" w="-1" h="-1" measuredW="131" measuredH="19" zOrder="23" locked="false" isInGroup="-1">
       <controlProperties>
+        <href>managedatafiles%26bm%3Bmanagedatafiles.bmml%26bm%3Bmanagedatafiles.bmml%26bm%3Bmanagedatafiles.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22570%2C575%2C701%2C594%22%20href%3D%22managedatafiles.bmml%22%20alt%3D%22managedatafiles%22%20id%3D%2233%22/%3E</map>
         <text>Manage%20Data%20file%20links</text>
       </controlProperties>
     </control>

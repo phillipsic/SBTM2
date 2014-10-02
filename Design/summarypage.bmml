@@ -19,6 +19,8 @@
     </control>
     <control controlID="3" controlTypeID="com.balsamiq.mockups::Link" x="148" y="536" w="-1" h="-1" measuredW="83" measuredH="19" zOrder="14" locked="false" isInGroup="-1">
       <controlProperties>
+        <href>projectadmin%26bm%3Bprojectadmin.bmml%26bm%3Bprojectadmin.bmml%26bm%3Bprojectadmin.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%2227%2C524%2C110%2C543%22%20href%3D%22projectadmin.bmml%22%20alt%3D%22projectadmin%22%20id%3D%223%22/%3E</map>
         <text>Project%20Admin</text>
       </controlProperties>
     </control>
@@ -29,21 +31,29 @@
     </control>
     <control controlID="5" controlTypeID="com.balsamiq.mockups::Link" x="431" y="508" w="-1" h="-1" measuredW="54" measuredH="19" zOrder="6" locked="false" isInGroup="-1">
       <controlProperties>
+        <href>sessionpage%26bm%3Bsessionpage.bmml%26bm%3Bsessionpage.bmml%26bm%3Bsessionpage.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22310%2C496%2C364%2C515%22%20href%3D%22sessionpage.bmml%22%20alt%3D%22sessionpage%22%20id%3D%225%22/%3E</map>
         <text>Sessions</text>
       </controlProperties>
     </control>
     <control controlID="6" controlTypeID="com.balsamiq.mockups::Link" x="431" y="536" w="-1" h="-1" measuredW="75" measuredH="19" zOrder="7" locked="false" isInGroup="-1">
       <controlProperties>
+        <href>mysessionpage%26bm%3Bmysessionpage.bmml%26bm%3Bmysessionpage.bmml%26bm%3Bmysessionpage.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22310%2C524%2C385%2C543%22%20href%3D%22mysessionpage.bmml%22%20alt%3D%22mysessionpage%22%20id%3D%226%22/%3E</map>
         <text>My%20Sessions</text>
       </controlProperties>
     </control>
     <control controlID="7" controlTypeID="com.balsamiq.mockups::Link" x="431" y="564" w="-1" h="-1" measuredW="94" measuredH="19" zOrder="8" locked="false" isInGroup="-1">
       <controlProperties>
+        <href>reviewpage%26bm%3Breviewpage.bmml%26bm%3Breviewpage.bmml%26bm%3Breviewpage.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22310%2C552%2C404%2C571%22%20href%3D%22reviewpage.bmml%22%20alt%3D%22reviewpage%22%20id%3D%227%22/%3E</map>
         <text>Review%20Session</text>
       </controlProperties>
     </control>
     <control controlID="8" controlTypeID="com.balsamiq.mockups::Link" x="431" y="591" w="-1" h="-1" measuredW="59" measuredH="19" zOrder="9" locked="false" isInGroup="-1">
       <controlProperties>
+        <href>datefiles%26bm%3Bdatefiles.bmml%26bm%3Bdatefiles.bmml%26bm%3Bdatefiles.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22310%2C579%2C369%2C598%22%20href%3D%22datefiles.bmml%22%20alt%3D%22datefiles%22%20id%3D%228%22/%3E</map>
         <text>Data%20Files</text>
       </controlProperties>
     </control>
@@ -54,6 +64,8 @@
     </control>
     <control controlID="11" controlTypeID="com.balsamiq.mockups::Link" x="431" y="619" w="-1" h="-1" measuredW="41" measuredH="19" zOrder="11" locked="false" isInGroup="-1">
       <controlProperties>
+        <href>searchpage%26bm%3Bsearchpage.bmml%26bm%3Bsearchpage.bmml%26bm%3Bsearchpage.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22310%2C607%2C351%2C626%22%20href%3D%22searchpage.bmml%22%20alt%3D%22searchpage%22%20id%3D%2211%22/%3E</map>
         <text>Search</text>
       </controlProperties>
     </control>
@@ -91,47 +103,58 @@
         <text>Actions</text>
       </controlProperties>
     </control>
-    <control controlID="23" controlTypeID="com.balsamiq.mockups::Label" x="549" y="96" w="-1" h="-1" measuredW="162" measuredH="26" zOrder="17" locked="false" isInGroup="-1">
-      <controlProperties>
-        <color>13369344</color>
-        <size>18</size>
-        <text>Message%20of%20the%20day</text>
-        <underline>true</underline>
-      </controlProperties>
-    </control>
-    <control controlID="24" controlTypeID="com.balsamiq.mockups::ComboBox" x="570" y="142" w="-1" h="-1" measuredW="121" measuredH="62" zOrder="18" locked="false" isInGroup="-1">
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::ComboBox" x="570" y="142" w="-1" h="-1" measuredW="121" measuredH="62" zOrder="17" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Choose%20Project%0AActive%201%0AActive%202</text>
       </controlProperties>
     </control>
-    <control controlID="26" controlTypeID="com.balsamiq.mockups::Label" x="217" y="257" w="-1" h="-1" measuredW="174" measuredH="21" zOrder="19" locked="false" isInGroup="-1">
+    <control controlID="26" controlTypeID="com.balsamiq.mockups::Label" x="217" y="257" w="-1" h="-1" measuredW="174" measuredH="21" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Number%20of%20active%20projects%20%3A%202</text>
       </controlProperties>
     </control>
-    <control controlID="27" controlTypeID="com.balsamiq.mockups::Label" x="217" y="301" w="-1" h="-1" measuredW="183" measuredH="21" zOrder="20" locked="false" isInGroup="-1">
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Label" x="217" y="301" w="-1" h="-1" measuredW="183" measuredH="21" zOrder="19" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Total%20number%20of%20sessions%20%3A%20354</text>
       </controlProperties>
     </control>
-    <control controlID="31" controlTypeID="com.balsamiq.mockups::Label" x="217" y="213" w="-1" h="-1" measuredW="163" measuredH="21" zOrder="21" locked="false" isInGroup="-1">
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::Label" x="217" y="213" w="-1" h="-1" measuredW="163" measuredH="21" zOrder="20" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Total%20number%20of%20projects%20%3A%205</text>
       </controlProperties>
     </control>
-    <control controlID="32" controlTypeID="com.balsamiq.mockups::Label" x="217" y="344" w="-1" h="-1" measuredW="243" measuredH="21" zOrder="22" locked="false" isInGroup="-1">
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::Label" x="217" y="344" w="-1" h="-1" measuredW="243" measuredH="21" zOrder="21" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Total%20number%20of%20sessions%20%20approved%20%3A%20201</text>
       </controlProperties>
     </control>
-    <control controlID="33" controlTypeID="com.balsamiq.mockups::Label" x="217" y="388" w="-1" h="-1" measuredW="268" measuredH="21" zOrder="23" locked="false" isInGroup="-1">
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::Label" x="217" y="388" w="-1" h="-1" measuredW="268" measuredH="21" zOrder="22" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Total%20number%20of%20sessions%20NOT%20approved%20%3A%20153</text>
       </controlProperties>
     </control>
-    <control controlID="34" controlTypeID="com.balsamiq.mockups::DataGrid" x="626" y="241" w="-1" h="-1" measuredW="441" measuredH="81" zOrder="24" locked="false" isInGroup="-1">
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::DataGrid" x="626" y="241" w="-1" h="-1" measuredW="441" measuredH="81" zOrder="23" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Project%20%20%5E%2C%20Todo%20%5Ev%2C%20Running%2C%20Finalise%20v%2C%20Submitted%2C%20Approved%0A3.7.6%20Regression%20%2C4%20%2C1%20%2C3%20%2C6%20%2C176%0A3.7.7%20Regression%20%2C45%2C5%20%2C3%20%2C8%20%2C15</text>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::Label" x="391" y="96" w="-1" h="-1" measuredW="492" measuredH="26" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13576743</color>
+        <size>18</size>
+        <text>You%20have%20unsubmitted%20sessions.%20%20Please%20deal%20with%20those%20first</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::CheckBoxGroup" x="659" y="365" w="-1" h="-1" measuredW="121" measuredH="39" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%5B%20%5D%20session%20template%0A%5Bx%5D%20coverage%20ini</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::TextArea" x="818" y="369" w="270" h="31" measuredW="200" measuredH="140" zOrder="26" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13576743</color>
+        <size>18</size>
+        <text>%20*%20Session%20Template%20not%20setup</text>
       </controlProperties>
     </control>
   </controls>

@@ -2,7 +2,7 @@
   <controls>
     <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="121" y="12" w="1019" h="726" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>SBTM%20Web%20Application%202%0Ahttp%3A//sbtm.web.app/profile</text>
+        <text>SBTM%20Web%20Application%202%0Ahttp%3A//sbtm.web.app/review</text>
       </controlProperties>
     </control>
     <control controlID="1" controlTypeID="com.balsamiq.mockups::Link" x="148" y="495" w="-1" h="-1" measuredW="57" measuredH="19" zOrder="3" locked="false" isInGroup="-1">
@@ -76,7 +76,7 @@
     </control>
     <control controlID="13" controlTypeID="com.balsamiq.mockups::FieldSet" x="135" y="169" w="981" h="313" measuredW="200" measuredH="170" zOrder="13" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>My%20Profile</text>
+        <text>Session%20Edit</text>
       </controlProperties>
     </control>
     <control controlID="18" controlTypeID="com.balsamiq.mockups::Link" x="148" y="578" w="-1" h="-1" measuredW="37" measuredH="19" zOrder="15" locked="false" isInGroup="-1">
@@ -101,16 +101,50 @@
         <text>Actions</text>
       </controlProperties>
     </control>
-    <control controlID="24" controlTypeID="com.balsamiq.mockups::ComboBox" x="570" y="142" w="-1" h="-1" measuredW="121" measuredH="62" zOrder="17" locked="false" isInGroup="-1">
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::Label" x="517" y="96" w="-1" h="-1" measuredW="226" measuredH="26" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13369344</color>
+        <size>18</size>
+        <text>Project%20Message%20of%20the%20day</text>
+        <underline>true</underline>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::ComboBox" x="570" y="142" w="-1" h="-1" measuredW="121" measuredH="62" zOrder="20" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Choose%20Project%0AActive%201%0AActive%202</text>
       </controlProperties>
     </control>
-    <control controlID="25" controlTypeID="com.balsamiq.mockups::Label" x="391" y="96" w="-1" h="-1" measuredW="492" measuredH="26" zOrder="18" locked="false" isInGroup="-1">
+    <control controlID="27" controlTypeID="com.balsamiq.mockups::Link" x="691" y="612" w="-1" h="-1" measuredW="42" measuredH="19" zOrder="18" locked="false" isInGroup="-1">
       <controlProperties>
-        <color>13576743</color>
-        <size>18</size>
-        <text>You%20have%20unsubmitted%20sessions.%20%20Please%20deal%20with%20those%20first</text>
+        <href>mysessionpage%26bm%3Bmysessionpage.bmml%26bm%3Bmysessionpage.bmml%26bm%3Bmysessionpage.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22570%2C600%2C612%2C619%22%20href%3D%22mysessionpage.bmml%22%20alt%3D%22mysessionpage%22%20id%3D%2227%22/%3E</map>
+        <text>Cancel</text>
+      </controlProperties>
+    </control>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::TextArea" x="148" y="182" w="960" h="287" measuredW="200" measuredH="140" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>CHARTER%0A-----------------------------------------------%0AExploration%20of%20DR-2-012-936%20PRS%20and%20CHK%20Domain%20-%20POS-CSR-B2B%0A%20%0A%20%0A%23AREAS%0AOS%20%7C%20LINUX%0ADR-2-012-936%20%7C%20PRS%20and%20CHK%20Domain%20-%20POS-CSR-B2B%0AApplicationServer%20%7C%20Weblogic%20%7C%2010.3%0AVersion%20%7C%203.5.90%0AWEB_Browser%20%7C%20IE8%0AAPPS%20%7C%20CSR%0ARoles%20%7C%20CSR%20Admin%0ARoles%20%7C%20Dealer%20Admin%0AENV%20%7C%20VE7%0ALANG%20%7C%20EN%0A%20%0ASTART%0A-----------------------------------------------%0A06/09/2011%2013%3A00%0A%20%0ATESTER</text>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="1092" y="182" w="-1" h="285" measuredW="16" measuredH="100" zOrder="21" locked="false" isInGroup="-1"/>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::Link" x="691" y="514" w="-1" h="-1" measuredW="99" measuredH="19" zOrder="22" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Return%20to%20Tester</text>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::Link" x="691" y="559" w="-1" h="-1" measuredW="49" measuredH="19" zOrder="23" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Approve</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Link" x="878" y="514" w="-1" h="-1" measuredW="111" measuredH="19" zOrder="24" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Open%20%27datafile1.dat%27</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Link" x="878" y="551" w="-1" h="-1" measuredW="118" measuredH="19" zOrder="25" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Open%20%27datafile3.png%27</text>
       </controlProperties>
     </control>
   </controls>
