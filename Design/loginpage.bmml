@@ -5,5 +5,30 @@
         <text>SBTM%20Web%20Application%202%0Ahttp%3A//sbtm.web.app/</text>
       </controlProperties>
     </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::TextInput" x="535" y="259" w="176" h="-1" measuredW="79" measuredH="26" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::TextInput" x="535" y="334" w="176" h="-1" measuredW="79" measuredH="26" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="454" y="262" w="-1" h="-1" measuredW="62" measuredH="21" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Username</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="454" y="337" w="-1" h="-1" measuredW="56" measuredH="21" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Password</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="596" y="397" w="-1" h="-1" measuredW="54" measuredH="27" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>summarypage%26bm%3Bsummarypage.bmml%26bm%3Bsummarypage.bmml%26bm%3Bsummarypage.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22482%2C397%2C536%2C424%22%20href%3D%22summarypage.bmml%22%20alt%3D%22summarypage%22%20id%3D%227%22/%3E</map>
+        <menuIcon>false</menuIcon>
+        <text>Login</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::StickyNote" x="151" y="85" w="128" h="86" measuredW="109" measuredH="123" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Testing%0ADo%20Not%20Disturb</text>
+      </controlProperties>
+    </control>
   </controls>
 </mockup>
