@@ -1,0 +1,4 @@
+services:
+#    sbtmapp_sbtm.example:
+#        class: Sbtmapp\SbtmBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
