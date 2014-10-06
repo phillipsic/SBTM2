@@ -1,8 +1,32 @@
 {# src/Sbtmapp/SbtmBundle/Resources/views/layout.html.twig #}
 {% extends '::base.html.twig' %}
 
-{% block title %}The blog title goes here{% endblock %}
 
-{% block body %}
-  layout.html.twig
+{% block wrapper %}
+    <header id="header">
+        <div class="top">
+            {% block navigation %}
+                <nav>
+                    <ul class="navigation">
+                        <li><a href="#">Logout</a></li>
+                        <li><a href="{{ path('SbtmappSbtmBundle_about') }}">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            {% endblock %}
+        </div>
+
+
+    </header>
+{% endblock %}
+{% block datapanel %}
+    Data panel
+{% endblock %}
+
+{% block leftside %}
+    Left panel
+{% endblock %}
+
+{% block rightside %}
+    Right panel
 {% endblock %}
