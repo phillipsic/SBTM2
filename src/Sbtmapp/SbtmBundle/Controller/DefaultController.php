@@ -13,5 +13,10 @@ class DefaultController extends Controller {
     public function summaryAction() {
         return $this->render('SbtmappSbtmBundle:Page:index.html.twig');
     }
+    
+     public function aboutAction()
+    {
+        return $this->render('SbtmappSbtmBundle:Page:about.html.twig');
+    }
 
 }
