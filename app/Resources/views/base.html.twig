@@ -2,17 +2,37 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-    {% block stylesheets %}{% endblock %}
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-</head>
-<body>
-{% block body %}{% endblock %}
-{% block javascripts %}{% endblock %}
+        <title>{% block title %}SBTM Web Application!{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('css/screen.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+
+        <section id="wrapper">
+
+        {% block wrapper %}{% endblock %}
+        <section class="datapanel">
+        {% block datapanel %}{% endblock %}
+    </section>
+
+    <div id="container">
+        <section class="leftside">
+        {% block leftside %}{% endblock %}
+    </section>
+    <section class="rightside">
+    {% block rightside %}{% endblock %}
+</section>
+</div>
+
 <div id="footer">
     {% block footer %}
-        Symfony2 blog tutorial - created by <a href="https://github.com/dsyph3r">dsyph3r</a>
+        SBTM web applicaiton - created by Ian Phillips
     {% endblock %}
 </div>
+</section>
+{% block javascripts %}{% endblock %}
+
 </body>
 </html>
