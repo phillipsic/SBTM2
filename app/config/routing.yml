@@ -1,6 +1,6 @@
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
-    resource: "@SbtmBundle/Resources/config/routing.yml"
+
 
 login_home:
     pattern:   /
@@ -11,5 +11,11 @@ login_home:
 sbtm_summary:
     pattern:   /summary
     defaults:  { _controller: SbtmappSbtmBundle:Default:summary }
+    requirements:
+        _method:  GET
+        
+SbtmappSbtmBundle_about:
+    pattern:  /about
+    defaults: { _controller: SbtmappSbtmBundle:Default:about }
     requirements:
         _method:  GET
