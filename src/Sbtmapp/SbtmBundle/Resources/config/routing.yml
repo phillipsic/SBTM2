@@ -1,0 +1,6 @@
+# src/Blogger/BlogBundle/Resources/config/routing.yml
+SbtmappSbtmBundle_about:
+    pattern:  /about
+    defaults: { _controller: SbtmappSbtmBundle:Page:about }
+    requirements:
+        _method:  GET
