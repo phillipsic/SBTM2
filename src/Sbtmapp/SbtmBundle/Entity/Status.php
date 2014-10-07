@@ -29,14 +29,17 @@ class Status {
      */
     protected $created;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    protected $updated;
 
     /**
      * Get id
      *
      * @return integer 
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -46,8 +49,7 @@ class Status {
      * @param string $name
      * @return Status
      */
-    public function setName($name)
-    {
+    public function setName($name) {
         $this->name = $name;
 
         return $this;
@@ -58,8 +60,7 @@ class Status {
      *
      * @return string 
      */
-    public function getName()
-    {
+    public function getName() {
         return $this->name;
     }
 
@@ -69,8 +70,7 @@ class Status {
      * @param \DateTime $created
      * @return Status
      */
-    public function setCreated($created)
-    {
+    public function setCreated($created) {
         $this->created = $created;
 
         return $this;
@@ -81,8 +81,31 @@ class Status {
      *
      * @return \DateTime 
      */
-    public function getCreated()
-    {
+    public function getCreated() {
         return $this->created;
+    }
+
+
+    /**
+     * Set updated
+     *
+     * @param \DateTime $updated
+     * @return Status
+     */
+    public function setUpdated($updated)
+    {
+        $this->updated = $updated;
+
+        return $this;
+    }
+
+    /**
+     * Get updated
+     *
+     * @return \DateTime 
+     */
+    public function getUpdated()
+    {
+        return $this->updated;
     }
 }
