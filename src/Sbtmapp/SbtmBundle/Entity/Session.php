@@ -45,25 +45,25 @@ class Session {
     protected $ready;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true))
      */
-    protected $tester;
+    protected $tester = null;
 
      /**
-     * @ORM\OneToOne(targetEntity="Status")
-     * @ORM\JoinColumn(name="status_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Status")
+     * @ORM\JoinColumn(name="status", referencedColumnName="id")
      */
     protected $status_id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Project", inversedBy="session_id")
-     * @ORM\JoinColumn(name="project_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Project", inversedBy="project")
+     * @ORM\JoinColumn(name="project", referencedColumnName="id")
      */
     protected $project_id;
 
       /**
-     * @ORM\OneToOne(targetEntity="Strategy")
-     * @ORM\JoinColumn(name="project_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Strategy")
+     * @ORM\JoinColumn(name="strategy", referencedColumnName="id", unique=false)
      */
     protected $strategy_id;
 
