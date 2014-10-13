@@ -18,13 +18,14 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 .leftside { width: 48%; float: left; border-right: 1px solid #ccc;  margin-bottom: 40px;  margin:0 auto; ; height: 100px }
 .rightside { width: 48%; padding: 10px; float: left; height: 100px}
 
-.datapanel { width: 100%;height: 200px;  padding: 10px;  border-bottom: 1px solid #ccc }
+.datapanel { width: 100%;height: 500px;  padding: 10px;  border-bottom: 1px solid #ccc }
 .datapanel h1 { line-height: 1.2em; font-size: 32px; margin-bottom: 10px; font-weight: normal; color: #F48A00; }
+.datapanel h2  { line-height: 1.0em; font-size: 24px; margin-bottom: 10px; font-weight: normal; color: #F48A00; }
 
 .main-col a { color: #F48A00; }
 .main-col h1,
 .main-col h2
-    { line-height: 1.2em; font-size: 32px; margin-bottom: 10px; font-weight: normal; color: #F48A00; }
+{ line-height: 1.2em; font-size: 32px; margin-bottom: 10px; font-weight: normal; color: #F48A00; }
 .main-col p { line-height: 1.5em; margin-bottom: 20px; }
 
 #footer { border-top: 1px solid #ccc; clear: both; text-align: center; padding: 10px; color: #aaa; }
@@ -32,4 +33,25 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 #container{
     width:100%;
     margin:0 auto;
+}
+
+#summary{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    width: 70%;
+    border-collapse: collapse;
+}
+
+#summary td, #customers th {
+    font-size: 1em;
+    border: 1px solid #F48A00;
+    padding: 3px 7px 2px 7px;
+}
+
+#summary th {
+    font-size: 1.1em;
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    background-color: #F48A00;
+   
 }
