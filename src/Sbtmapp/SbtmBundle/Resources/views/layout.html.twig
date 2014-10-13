@@ -19,14 +19,18 @@
 
     </header>
 {% endblock %}
-{% block datapanel %}
-    Data panel
-{% endblock %}
 
-{% block leftside %}
-    Left panel
-{% endblock %}
 
-{% block rightside %}
-    Right panel
+{% block container %}
+    <div id="container">
+        <section class="leftside">
+            <a href="{{ path('SbtmappSbtmBundle_summary') }}">Summary</a><br>
+            <a href="{{ path('SbtmappSbtmBundle_sessions') }}">Sessions</a> <br>
+            
+        </section>
+        <section class="rightside">
+        {% block rightside %}{% endblock %}
+    </section>
+</div>
+
 {% endblock %}

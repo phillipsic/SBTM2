@@ -1,0 +1,27 @@
+{# src/Sbtmapp/SbtmBundle/Resources/views/Page/index.html.twig #}
+{% extends 'SbtmappSbtmBundle::layout.html.twig' %}
+
+{% block datapanel %}
+
+    <h1>Dashboard</h1>
+    
+    <table id="summary">
+        <tr>
+            <th>Description</th>
+            <th>Number</th>
+        <tr>
+        <tr class="alt">
+            <td> Total number of Sessions </td><td> {{totalSessionCount}}  </td>
+        </tr>
+        <tr >
+            <td> Total number of  active Sessions </td><td> TBA </td>
+        </tr>
+          <tr class="alt">
+        <td>Total number of Projects  </td><td> {{totalProjectCount}}  </td>
+          </tr>
+        <tr>
+            <td>Total number of Active Project </td><td> {{totalOpenProjectCount}}  </td>
+        </tr>
+    </table>
+
+{% endblock %}
