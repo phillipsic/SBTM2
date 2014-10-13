@@ -6,16 +6,26 @@
     <header id="header">
         <div class="top">
             {% block navigation %}
-                <nav>
-                    <ul class="navigation">                       
-                        <li><a href="{{ path('SbtmappSbtmBundle_about') }}">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
-                    </ul>
-                </nav>
-            {% endblock %}
-        </div>
 
+
+                {% block dropdown %} {% endblock %}
+
+                <div style='float:right; width: 180px;'>
+                    <div style='position: fixed'>
+                        <nav>
+                            <ul class="navigation">                       
+                                <li><a href="{{ path('SbtmappSbtmBundle_about') }}">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            {% endblock %}
+            </td>          
+
+        </div>
 
     </header>
 {% endblock %}
@@ -26,7 +36,7 @@
         <section class="leftside">
             <a href="{{ path('SbtmappSbtmBundle_summary') }}">Summary</a><br>
             <a href="{{ path('SbtmappSbtmBundle_sessions') }}">Sessions</a> <br>
-            
+
         </section>
         <section class="rightside">
         {% block rightside %}{% endblock %}
