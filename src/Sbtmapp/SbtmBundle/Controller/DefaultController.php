@@ -23,8 +23,8 @@ class DefaultController extends Controller {
         $totalSessionCount = $qb->getQuery()->getSingleScalarResult();
 
         # Total number of not completed sessions in database
-        
-        
+
+
         $qb = $em->createQuery(
                         'SELECT s '
                         . 'FROM Sbtmapp\SbtmBundle\Entity\Session s '
@@ -33,13 +33,13 @@ class DefaultController extends Controller {
                         . 'WHERE st.name = :status ')
                 ->setParameter('status', 'Todo');
         $totalActiveSessionCount = $qb->getResult();
-    
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
 
         /*
           $qb->select('count(session.id)');
@@ -65,34 +65,36 @@ class DefaultController extends Controller {
                 ->setParameter('completed', '0');
         $totalActiveProjectCount = $qb->getQuery()->getSingleScalarResult();
 
-        
-        
-         # Total number of Active projects Details for the drop down menu
-        $qb = $em->createQueryBuilder();
-        $qb->select('project')
-                ->from('SbtmappSbtmBundle:Project', 'project')
-                ->where('project.project_completed = :completed')
+
+
+        # Total number of Active projects Details for the drop down menu
+         $em2 = $this->getDoctrine()->getManager();
+        $qb = $em2->createQueryBuilder();
+        $qb->select('p.id, p.project_name')
+                ->from('SbtmappSbtmBundle:Project', 'p')
+                ->where('p.project_completed = :completed')
                 ->setParameter('completed', '0');
         $dropDownDetails = $qb->getQuery()->getResult();
-        
+
 
 
         return $this->render('SbtmappSbtmBundle:Page:summary.html.twig', array(
                     'totalSessionCount' => $totalSessionCount,
                     'totalProjectCount' => $totalProjectCount,
-                    'totalOpenProjectCount' => $totalActiveProjectCount
+                    'totalOpenProjectCount' => $totalActiveProjectCount,
+                    'projectDetails' => $dropDownDetails
         ));
     }
 
     public function aboutAction() {
         return $this->render('SbtmappSbtmBundle:Page:about.html.twig');
     }
-    
-      public function sessionsAction() {
-          
-          
-          
-          
+
+    public function sessionsAction() {
+
+
+
+
         return $this->render('SbtmappSbtmBundle:Page:sessions.html.twig');
     }
 
