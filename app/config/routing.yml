@@ -12,7 +12,7 @@ SbtmappSbtmBundle_summary:
     pattern:   /summary
     defaults:  { _controller: SbtmappSbtmBundle:Default:summary }
     requirements:
-        _method:  GET
+        _method:  GET|POST
         
 SbtmappSbtmBundle_about:
     pattern:  /about
