@@ -4,14 +4,13 @@
 
 {% block dropdown %}
 
-    
-    {% for project in projectDetails %}
-       {{ project.id }}- <br />
-        {{ project.project_name }}- <br />
-    {% endfor %}
-    
- 
+<form action="#" method="post">
+{{ form_widget(form) }}
+<input type="submit" />
+
    
+    Logged user {{  loggedUser }}
+
 
 {% endblock %}
 
