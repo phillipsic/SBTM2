@@ -3,6 +3,9 @@
 namespace Sbtmapp\SbtmBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Session;
+use Sbtmapp\SbtmBundle\Entity\Project;
+use Sbtmapp\SbtmBundle\Form\Type\ChooseProjectType;
 
 class DefaultController extends Controller {
 
@@ -11,7 +14,8 @@ class DefaultController extends Controller {
     }
 
     public function summaryAction() {
-
+        $session = $this->get("session");
+        $session->set("loggedUser", "Ian");
 
 
         $em = $this->getDoctrine()->getManager();
@@ -36,21 +40,6 @@ class DefaultController extends Controller {
 
 
 
-
-
-
-
-
-        /*
-          $qb->select('count(session.id)');
-          $qb->from('SbtmappSbtmBundle:Session', 'session')
-          ->where('status.name <> :status')
-          ->
-          ->leftJoin('SbtmappSbtmBundle:Status', 'status', 'session.status', 'status.id')
-          ->setParameter('status', 'Todo');
-          $totalSessionCount = $qb->getQuery()->getSingleScalarResult();
-         */
-
         # Total number of projects
         $qb = $em->createQueryBuilder();
         $qb->select('count(project.id)');
@@ -68,7 +57,7 @@ class DefaultController extends Controller {
 
 
         # Total number of Active projects Details for the drop down menu
-         $em2 = $this->getDoctrine()->getManager();
+        $em2 = $this->getDoctrine()->getManager();
         $qb = $em2->createQueryBuilder();
         $qb->select('p.id, p.project_name')
                 ->from('SbtmappSbtmBundle:Project', 'p')
@@ -77,12 +66,31 @@ class DefaultController extends Controller {
         $dropDownDetails = $qb->getQuery()->getResult();
 
 
+        # Set up the form for the dropdown selection
+        $project = new ChooseProjectType();
+        $form = $this->createForm($project, $dropDownDetails);
+
+        $request = $this->getRequest();
+        if ($request->getMethod() == 'POST') {
+            $form->bindRequest($request);
+
+            if ($form->isValid()) {
+                // Perform some action, such as sending an email
+                // Redirect - This is important to prevent users re-posting
+                // the form if they refresh the page
+                return $this->redirect($this->generateUrl('SbtmappSbtmBundle:Page:summary.html.twig'));
+            }
+        }
+
+
 
         return $this->render('SbtmappSbtmBundle:Page:summary.html.twig', array(
                     'totalSessionCount' => $totalSessionCount,
                     'totalProjectCount' => $totalProjectCount,
                     'totalOpenProjectCount' => $totalActiveProjectCount,
-                    'projectDetails' => $dropDownDetails
+                    'projectDetails' => $dropDownDetails,
+                    'loggedUser' => $session->get("loggedUser"),
+                    'form' => $form->createView()
         ));
     }
 
