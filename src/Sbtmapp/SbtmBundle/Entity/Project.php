@@ -57,8 +57,7 @@ class Project {
     /**
      * Constructor
      */
-    public function __construct()
-    {
+    public function __construct() {
         $this->session_id = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
@@ -67,8 +66,7 @@ class Project {
      *
      * @return integer 
      */
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
 
@@ -78,8 +76,7 @@ class Project {
      * @param string $projectName
      * @return Project
      */
-    public function setProjectName($projectName)
-    {
+    public function setProjectName($projectName) {
         $this->project_name = $projectName;
 
         return $this;
@@ -90,8 +87,7 @@ class Project {
      *
      * @return string 
      */
-    public function getProjectName()
-    {
+    public function getProjectName() {
         return $this->project_name;
     }
 
@@ -101,8 +97,7 @@ class Project {
      * @param \DateTime $projectStartDate
      * @return Project
      */
-    public function setProjectStartDate($projectStartDate)
-    {
+    public function setProjectStartDate($projectStartDate) {
         $this->project_start_date = $projectStartDate;
 
         return $this;
@@ -113,8 +108,7 @@ class Project {
      *
      * @return \DateTime 
      */
-    public function getProjectStartDate()
-    {
+    public function getProjectStartDate() {
         return $this->project_start_date;
     }
 
@@ -124,8 +118,7 @@ class Project {
      * @param \DateTime $projectEndDate
      * @return Project
      */
-    public function setProjectEndDate($projectEndDate)
-    {
+    public function setProjectEndDate($projectEndDate) {
         $this->project_end_date = $projectEndDate;
 
         return $this;
@@ -136,8 +129,7 @@ class Project {
      *
      * @return \DateTime 
      */
-    public function getProjectEndDate()
-    {
+    public function getProjectEndDate() {
         return $this->project_end_date;
     }
 
@@ -147,8 +139,7 @@ class Project {
      * @param boolean $projectCompleted
      * @return Project
      */
-    public function setProjectCompleted($projectCompleted)
-    {
+    public function setProjectCompleted($projectCompleted) {
         $this->project_completed = $projectCompleted;
 
         return $this;
@@ -159,8 +150,7 @@ class Project {
      *
      * @return boolean 
      */
-    public function getProjectCompleted()
-    {
+    public function getProjectCompleted() {
         return $this->project_completed;
     }
 
@@ -170,8 +160,7 @@ class Project {
      * @param \DateTime $created
      * @return Project
      */
-    public function setCreated($created)
-    {
+    public function setCreated($created) {
         $this->created = $created;
 
         return $this;
@@ -182,8 +171,7 @@ class Project {
      *
      * @return \DateTime 
      */
-    public function getCreated()
-    {
+    public function getCreated() {
         return $this->created;
     }
 
@@ -193,8 +181,7 @@ class Project {
      * @param \DateTime $updated
      * @return Project
      */
-    public function setUpdated($updated)
-    {
+    public function setUpdated($updated) {
         $this->updated = $updated;
 
         return $this;
@@ -205,8 +192,7 @@ class Project {
      *
      * @return \DateTime 
      */
-    public function getUpdated()
-    {
+    public function getUpdated() {
         return $this->updated;
     }
 
@@ -216,8 +202,7 @@ class Project {
      * @param \Sbtmapp\SbtmBundle\Entity\Session $sessionId
      * @return Project
      */
-    public function addSessionId(\Sbtmapp\SbtmBundle\Entity\Session $sessionId)
-    {
+    public function addSessionId(\Sbtmapp\SbtmBundle\Entity\Session $sessionId) {
         $this->session_id[] = $sessionId;
 
         return $this;
@@ -228,8 +213,7 @@ class Project {
      *
      * @param \Sbtmapp\SbtmBundle\Entity\Session $sessionId
      */
-    public function removeSessionId(\Sbtmapp\SbtmBundle\Entity\Session $sessionId)
-    {
+    public function removeSessionId(\Sbtmapp\SbtmBundle\Entity\Session $sessionId) {
         $this->session_id->removeElement($sessionId);
     }
 
@@ -238,8 +222,10 @@ class Project {
      *
      * @return \Doctrine\Common\Collections\Collection 
      */
-    public function getSessionId()
-    {
+    public function getSessionId() {
         return $this->session_id;
     }
+
+ 
+
 }
