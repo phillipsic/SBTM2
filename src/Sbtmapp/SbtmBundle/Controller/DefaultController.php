@@ -72,24 +72,29 @@ class DefaultController extends Controller {
 
         $request = $this->getRequest();
         if ($request->getMethod() == 'POST') {
-            $form->bindRequest($request);
+            $form->bind($request);
 
             if ($form->isValid()) {
-                // Perform some action, such as sending an email
-                // Redirect - This is important to prevent users re-posting
-                // the form if they refresh the page
+
+                $project = $form->getData();
+
+                $selectedProject = $project->getProject();
+
+                $session->set("selectProject", $selectedProject);
+
                 return $this->redirect($this->generateUrl('SbtmappSbtmBundle:Page:summary.html.twig'));
             }
         }
 
-
+        $session->get("loggedUser");
 
         return $this->render('SbtmappSbtmBundle:Page:summary.html.twig', array(
                     'totalSessionCount' => $totalSessionCount,
                     'totalProjectCount' => $totalProjectCount,
                     'totalOpenProjectCount' => $totalActiveProjectCount,
                     'projectDetails' => $dropDownDetails,
-                    'loggedUser' => $session->get("loggedUser"),
+                    'loggedUser' => $this->getUser()->getUsername(),
+                    'selectedProject' => $session->get("selectProject"),
                     'form' => $form->createView()
         ));
     }
@@ -99,10 +104,6 @@ class DefaultController extends Controller {
     }
 
     public function sessionsAction() {
-
-
-
-
         return $this->render('SbtmappSbtmBundle:Page:sessions.html.twig');
     }
 
