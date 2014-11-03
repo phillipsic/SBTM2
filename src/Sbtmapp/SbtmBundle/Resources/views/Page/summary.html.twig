@@ -4,12 +4,14 @@
 
 {% block dropdown %}
 
-<form action="#" method="post">
+<form action="{{ path('SbtmappSbtmBundle_summary') }}" method="post">
 {{ form_widget(form) }}
 <input type="submit" />
+<br>
 
    
-    Logged user {{  loggedUser }}
+Logged user: {{ loggedUser }}<br>
+Selected Project: {{ selectedProject }}<br>
 
 
 {% endblock %}
