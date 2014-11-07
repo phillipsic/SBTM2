@@ -21,12 +21,12 @@ class ChooseProjectType extends AbstractType {
             'class' => 'SbtmappSbtmBundle:Project',
             'property' => 'project_name',
             'expanded' => false,
-            'multiple' => FALSE));
+            'multiple' => false));
     }
 
   
         public function getName() {
-            return 'project';
+            return 'property';
         }
 
     

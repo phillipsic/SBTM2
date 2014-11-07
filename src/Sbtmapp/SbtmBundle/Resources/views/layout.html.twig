@@ -9,24 +9,24 @@
                 <div style='float:left; width: 100px;'>
                 </div>
 
-                    {% block dropdown %} {% endblock %}
+                
 
-                    <div style='float:right; width: 180px;'>
-                        <div style='position: fixed'>
-                            <nav>
-                                <ul class="navigation">                       
-                                    <li><a href="{{ path('SbtmappSbtmBundle_about') }}">About</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                    <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
-                                </ul>
-                            </nav>
-                        </div>
+                <div style='float:right; width: 180px;'>
+                    <div style='position: fixed'>
+                        <nav>
+                            <ul class="navigation">                       
+                                <li><a href="{{ path('SbtmappSbtmBundle_about') }}">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+                            </ul>
+                        </nav>
                     </div>
+                </div>
 
-                {% endblock %}
-                </td>          
+            {% endblock %}
+            </td>          
 
-            </div>
+        </div>
 
     </header>
 {% endblock %}
@@ -35,6 +35,7 @@
 {% block container %}
     <div id="container">
         <section class="leftside">
+            <a href="{{ path('SbtmappSbtmBundle_selectProject') }}">Change Project</a> <br>
             <a href="{{ path('SbtmappSbtmBundle_summary') }}">Summary</a><br>
             <a href="{{ path('SbtmappSbtmBundle_sessions') }}">Sessions</a> <br>
 

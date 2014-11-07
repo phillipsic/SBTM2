@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Session;
 use Sbtmapp\SbtmBundle\Entity\Project;
 use Sbtmapp\SbtmBundle\Form\Type\ChooseProjectType;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller {
 
@@ -13,9 +14,47 @@ class DefaultController extends Controller {
         return $this->render('SbtmappSbtmBundle:Default:index.html.twig');
     }
 
-    public function summaryAction() {
+    public function selectProjectAction(Request $request) {
+
         $session = $this->get("session");
         $session->set("loggedUser", "Ian");
+
+
+
+        # Total number of Active projects Details for the drop down menu
+        $em2 = $this->getDoctrine()->getManager();
+        $qb = $em2->createQueryBuilder();
+        $qb->select('p.id, p.project_name')
+                ->from('SbtmappSbtmBundle:Project', 'p')
+                ->where('p.project_completed = :completed')
+                ->setParameter('completed', '0');
+        $dropDownDetails = $qb->getQuery()->getResult();
+
+
+        # Set up the form for the dropdown selection
+        $project = new ChooseProjectType();
+        $form = $this->createForm($project, $dropDownDetails);
+
+
+
+        $form->handleRequest($request);
+
+        if ($form->isValid()) {
+            // perform some action, such as saving the task to the database
+            $session->set("selectProject", "Ian");
+            return $this->redirect($this->generateUrl('summary'));
+        }
+
+
+        return $this->render('SbtmappSbtmBundle:Page:changeproject.html.twig', array(
+                    'loggedUser' => $this->getUser()->getUsername(),
+                    'selectedProject' => $session->get("selectProject"),
+                    'form' => $form->createView()
+        ));
+    }
+
+    public function summaryAction() {
+
 
 
         $em = $this->getDoctrine()->getManager();
@@ -56,35 +95,10 @@ class DefaultController extends Controller {
 
 
 
-        # Total number of Active projects Details for the drop down menu
-        $em2 = $this->getDoctrine()->getManager();
-        $qb = $em2->createQueryBuilder();
-        $qb->select('p.id, p.project_name')
-                ->from('SbtmappSbtmBundle:Project', 'p')
-                ->where('p.project_completed = :completed')
-                ->setParameter('completed', '0');
-        $dropDownDetails = $qb->getQuery()->getResult();
 
 
-        # Set up the form for the dropdown selection
-        $project = new ChooseProjectType();
-        $form = $this->createForm($project, $dropDownDetails);
+        $session = $this->get("session");
 
-        $request = $this->getRequest();
-        if ($request->getMethod() == 'POST') {
-            $form->bind($request);
-
-            if ($form->isValid()) {
-
-                $project = $form->getData();
-
-                $selectedProject = $project->getProject();
-
-                $session->set("selectProject", $selectedProject);
-
-                return $this->redirect($this->generateUrl('SbtmappSbtmBundle:Page:summary.html.twig'));
-            }
-        }
 
         $session->get("loggedUser");
 
@@ -92,10 +106,7 @@ class DefaultController extends Controller {
                     'totalSessionCount' => $totalSessionCount,
                     'totalProjectCount' => $totalProjectCount,
                     'totalOpenProjectCount' => $totalActiveProjectCount,
-                    'projectDetails' => $dropDownDetails,
-                    'loggedUser' => $this->getUser()->getUsername(),
-                    'selectedProject' => $session->get("selectProject"),
-                    'form' => $form->createView()
+                    'loggedUser' => $this->getUser()->getUsername()
         ));
     }
 

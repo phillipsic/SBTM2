@@ -2,20 +2,6 @@
 {% extends 'SbtmappSbtmBundle::layout.html.twig' %}
 
 
-{% block dropdown %}
-
-<form action="{{ path('SbtmappSbtmBundle_summary') }}" method="post">
-{{ form_widget(form) }}
-<input type="submit" />
-<br>
-
-   
-Logged user: {{ loggedUser }}<br>
-Selected Project: {{ selectedProject }}<br>
-
-
-{% endblock %}
-
 {% block datapanel %}
 
     <h1>Dashboard</h1>
@@ -26,16 +12,16 @@ Selected Project: {{ selectedProject }}<br>
             <th>Number</th>
         <tr>
         <tr class="alt">
-            <td> Total number of Sessions </td><td> {{totalSessionCount}}  </td>
+            <td> Total number of sessions </td><td> {{totalSessionCount}}  </td>
         </tr>
         <tr >
-            <td> Total number of  active Sessions </td><td> TBA </td>
+            <td> Total number of  active sessions </td><td> TBA </td>
         </tr>
         <tr class="alt">
-            <td>Total number of Projects  </td><td> {{totalProjectCount}}  </td>
+            <td>Total number of projects  </td><td> {{totalProjectCount}}  </td>
         </tr>
         <tr>
-            <td>Total number of Active Project </td><td> {{totalOpenProjectCount}}  </td>
+            <td>Total number of active projects </td><td> {{totalOpenProjectCount}}  </td>
         </tr>
     </table>
 
