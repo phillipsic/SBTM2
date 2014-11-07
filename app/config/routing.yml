@@ -4,7 +4,7 @@ fos_user:
 
 login_home:
     pattern:   /
-    defaults:  { _controller: SbtmappSbtmBundle:Default:summary }
+    defaults:  { _controller: SbtmappSbtmBundle:Default:selectProject }
     requirements:
         _method:  GET
 
@@ -25,3 +25,9 @@ SbtmappSbtmBundle_sessions:
     defaults: { _controller: SbtmappSbtmBundle:Default:sessions }
     requirements:
         _method:  GET
+        
+SbtmappSbtmBundle_selectProject:
+    pattern:   /selectProject
+    defaults:  { _controller: SbtmappSbtmBundle:Default:selectProject }
+    requirements:
+        _method:  GET|POST
