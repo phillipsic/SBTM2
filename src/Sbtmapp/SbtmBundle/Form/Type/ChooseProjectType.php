@@ -17,7 +17,7 @@ class ChooseProjectType extends AbstractType {
     public function buildForm(FormBuilderInterface $builder, array $options) {
 
         $builder->add('project', 'entity', array(
-            'label' => 'Projects',
+            'label' => 'Select Project ',
             'class' => 'SbtmappSbtmBundle:Project',
             'property' => 'project_name',
             'expanded' => false,
@@ -26,7 +26,7 @@ class ChooseProjectType extends AbstractType {
 
   
         public function getName() {
-            return 'property';
+            return 'project';
         }
 
     

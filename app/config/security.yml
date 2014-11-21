@@ -17,7 +17,7 @@ security:
             form_login:
                 provider: fos_userbundle
                 csrf_provider: form.csrf_provider
-                default_target_path: /summary
+                default_target_path: /selectProject
                 always_use_default_target_path: true                
             
             logout:       

@@ -20,6 +20,10 @@ class DefaultController extends Controller {
         $session->set("loggedUser", "Ian");
 
 
+        if ($session->get("selectProject") == "") {
+            $session->set("selectProject", "No project selected");
+        }
+
 
         # Total number of Active projects Details for the drop down menu
         $em2 = $this->getDoctrine()->getManager();
@@ -42,7 +46,16 @@ class DefaultController extends Controller {
         if ($form->isValid()) {
             // perform some action, such as saving the task to the database
             $session->set("selectProject", "Ian");
-            return $this->redirect($this->generateUrl('summary'));
+            $data = $form->getData();
+            
+  //$selectedProject = $form->get('project_name')->getData();
+            var_dump($data);
+            $selectedProject = $data->get('project')->getData();
+            
+            echo "submitted value is : " . $selectedProject;
+            //$session->set("selectProject", $form->get('project') );
+
+            return $this->redirect($this->generateUrl('SbtmappSbtmBundle_summary'));
         }
 
 
@@ -55,7 +68,7 @@ class DefaultController extends Controller {
 
     public function summaryAction() {
 
-
+        $session = $this->get("session");
 
         $em = $this->getDoctrine()->getManager();
 
@@ -106,6 +119,7 @@ class DefaultController extends Controller {
                     'totalSessionCount' => $totalSessionCount,
                     'totalProjectCount' => $totalProjectCount,
                     'totalOpenProjectCount' => $totalActiveProjectCount,
+                    'selectedProject' => $session->get("selectProject"),
                     'loggedUser' => $this->getUser()->getUsername()
         ));
     }
